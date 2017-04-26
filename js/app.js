@@ -15,3 +15,13 @@ app.controller('mainCtrl', ['$scope','$http', function($scope,$http){
   }
 
 }]);
+
+
+//filtro para poner la primera letra en mayúscula
+app.filter("capitalize", function(){
+    return function(text) {
+        if(text != null){
+            return text.substring(0,1).toUpperCase()+text.substring(1);
+        }
+    }
+})

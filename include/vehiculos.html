@@ -1,2 +1,28 @@
 <h1>Vehiculos</h1>
 <p>Esta es la Pagina de Vehiculos</p>
+<hr>
+<div class="row">
+	
+<table class="table table-striped">
+	<tr>
+		<th>Marca</th>
+		<th>Modelo</th>
+		<th>Color</th>
+		<th>Año</th>
+		<th>Precio</th>
+		<th>Cantidad</th>
+
+	</tr>
+	<tr ng-repeat="vehiculo in vehiculos">
+		<td>{{ vehiculo.marca | capitalize }}</td>
+		<td>{{ vehiculo.modelo | capitalize }}</td>
+		<td>{{ vehiculo.color | capitalize }}</td>
+		<td>{{ vehiculo.Year }}</td>
+		<td>{{ vehiculo.precio | currency}}</td>
+		<td>{{ vehiculo.cantidad }}</td>
+	</tr>
+
+</table>
+</div>
+
+{{  vehiculos | json }}
